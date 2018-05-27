@@ -1,0 +1,19 @@
+
+accepted
+You can create an active profile for 2 different environments say dev/prod to resolve this issue. If you are using Eclipse create an application to start and add in VM arguments when you are trying to start the application as,
+
+for dev
+  -Dspring.profiles.active=local 
+for production
+  -Dspring.profiles.active=prod  
+and if you are trying to run as jar,
+
+ for Dev,
+     java -jar SpringBootCRUDApplicationExample-1.0.0.jar --spring.profiles.active=local
+
+for Production,
+ java -jar SpringBootCRUDApplicationExample-1.0.0.jar --spring.profiles.active=prod
+ 
+ 
+ 
+ http://websystique.com/spring-boot/spring-boot-angularjs-spring-data-jpa-crud-app-example/
